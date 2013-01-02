@@ -31,4 +31,6 @@
 *.xdy
 *.tex~
 *.backup
+*~
 *.tdo
+*.properties.xml
