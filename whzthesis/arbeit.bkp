@@ -1,0 +1,99 @@
+\documentclass[bachelor,german]{hgbthesis}
+% Zulässige Class Options: 
+%   Typ der Arbeit: diplom (default), master, bachelor, praktikum 
+%   Hauptsprache: german (default), english
+
+\graphicspath{{images/}}    % wo liegen die Bilder?
+
+%%%----------------------------------------------------------
+\begin{document}
+%%%----------------------------------------------------------
+
+%%% Diplomarbeit, Bachelorarbeit, oder Praktikumsbericht?
+%%% Achtung: auch im FH-MASTER-Studium ist eine "Diplomarbeit" vorgesehen!
+
+%%% Entsprechende Blöcke auskommentieren:
+
+%% Felder für ALLE Arbeiten: --------------------------------
+%\title{Automatisierte CRUD-Interfaces für EJB 3 über Rest-Services}
+\title{Möglichkeiten eines effektiven Datenaustausches bei Client-Server-Architekturen}
+\author{Müller, Andreas}
+\gebdatum{14. November 1986}
+\gebort{Zwickau}
+\hochschule{Westsächsische Hochschule Zwickau}
+\fakultaet{Fakultät Physikalische Technik / Informatik}
+\fachgruppe{Fachgruppe Informatik}
+\studiengang{Informatik}
+\studienort{Zwickau}
+\abgabedatum{01. Juli 2008}
+
+
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+\nummer{XXXXXXXXXX-A}   % XX...X = Stud-ID, z.B. 0310238045-A  
+                        % (A = 1. Bachelorarbeit)
+\semester{Sommersemester 2010} 
+\gegenstand{Einführung in die Tiefere Problematik 1} 
+\betreuerA{Prof. Dr. M. Meier, WH Zwickau}
+\betreuerB{Dipl.-Inf. H. Schulze, Computer GmbH, Berlin}
+
+%%% zusätzlich für einen Praktikumsbericht: -----------------
+\nummer{XXXXXXXXXX-B}   % XX...X = Stud-ID, z.B. 0310238045-B  
+                        % (B = 2. Bachelorarbeit)
+\firma{%
+   Oligarchic Media International GmbH\\
+   Online Division\\
+   1020 Wien, Hubertusgasse 3a
+}
+\firmenTel{1-234-5678-100}
+\firmenUrl{www.mogul.at}
+
+%%%----------------------------------------------------------
+\frontmatter
+\maketitle
+\tableofcontents
+%%%----------------------------------------------------------
+
+%\include{0-vorspann/vorwort}				%ggfs. weglassen
+%\include{0-vorspann/kurzfassung}		
+%\include{0-vorspann/abstract}			
+
+%%%----------------------------------------------------------
+\mainmatter           %Hauptteil (ab hier arab. Seitenzahlen)
+%%%----------------------------------------------------------
+
+%\include{1-einleitung/einleitung}
+%\include{2-kapitel1/diplomschrift}
+%\include{2-kapitel1/latex}
+%\include{2-kapitel1/abbildungen}
+%\include{2-kapitel1/mathematik}
+%\include{2-kapitel1/literatur}
+%\include{2-kapitel1/drucken}
+%\include{2-kapitel1/word}
+%\include{2-kapitel1/schluss}
+
+%%%----------------------------------------------------------
+%%%Anhang
+%\appendix
+%\include{XX-Anhang/anhang_a}	% Technische Ergänzungen
+%\include{XX-Anhang/anhang_b}	% Inhalt der CD-ROM/DVD
+%\include{XX-Anhang/anhang_c}	% Chronologische Liste der Änderungen
+%\include{XX-Anhang/anhang_d}	% Quelltext dieses Dokuments
+
+%%%----------------------------------------------------------
+
+%Literaturverzeichnis
+%\clearpage 
+%\addcontentsline{toc}{chapter}{\bibname}
+%\bibliographystyle{bababbrv} 
+%options: babplain, babunsrt, bababbrv, babalpha 
+%         babplain-fl etc: first/lastname 
+%         babplain-lf etc: last/firstname
+%\bibliography{literatur}     %BibTeX-Datei literatur.bib
+
+
+%%%----------------------------------------------------------
+
+%%%Messbox zur Druckkontrolle
+\include{data/messbox}
+
+\end{document}

@@ -1,0 +1,166 @@
+\chapter{\latex Grundlagen}
+\label{cha:ArbeitenMitLatex}
+
+
+\section{Grundstruktur}
+
+\latex benutzt  für die Erstellung von Dokumenten eine Beschreibungsprache (engl. markup language). 
+Diese Art der Dokumentenbeschreibung verhält sich Ähnlich wie die weit verbreitete markup language HTML zur Darstellung von Webseiten.
+Die Beschreibenden Elemente und der Text werden mit Hilfe der LaTeX Implemtierung in die Dokumentenform konvertiert.
+Das minimalistischste Beispiel für Latex sieht dabei wie folgt aus: \\
+
+\begin{lstlisting}
+\documentclass{article}
+\begin{document}
+  Hello world!
+\end{document}
+\end{lstlisting}
+
+Mit dem documentclass-Befehl wird die Dokumentenklasse gewählt, welche die meisten Grundeinstellung für die Dokumentendarstellung übernimmt \bzw festlegt.
+Danach können weitere gloabale Konfigurationen folgen \zB dss einbinden von weiteren Paketen über das Schlüsselwort \verb!\usepackage{paketname}!
+Innerhalb der document-Umgebung wird dann der entsprechende Text mit den jeweiligen Formatierungen geschrieben.
+
+
+
+
+\section{Schrift}
+
+\subsection{Schriftfamilien}
+%
+\begin{quote}
+\begin{tabular}{lcl}
+\textrm{Roman}      & & \verb!\textrm{Roman}!\\
+\textsf{Sans Serif} & & \verb!\textsf{Sans Serif}!\\
+\texttt{Typewriter} & & \verb!\texttt{Typewriter}!\\
+\end{tabular}
+\end{quote}
+%
+
+\subsection{Schriftschnitte}
+%
+\begin{quote}
+\begin{tabular}{lcl}
+\textit{Kursiv}     & & \verb!\textit{Kursiv}!\\
+\textsl{Geneigt}	& & \verb!\textsl{Geneigt}!\\
+\textsc{Small Caps} & & \verb!\textsc{Small Caps}!\\
+\textup{Aufrecht}   & & \verb!\textup{Aufrecht}!\\
+\end{tabular}
+\end{quote}
+%
+
+\subsection{Schriftserien}
+%
+\begin{quote}
+\begin{tabular}{lcl}
+\textbf{Bold}       & & \verb!\textbf{Bold}!\\
+\textsl{Geneigt}	& & \verb!\textsl{Geneigt}!\\
+\textsc{Small Caps} & & \verb!\textsc{Small Caps}!\\
+\textup{Aufrecht}   & & \verb!\textup{Aufrecht}!\\
+\end{tabular}
+\end{quote}
+%
+
+\section{Textgliederung}
+\label{sec:ueberschriften}
+
+%
+\begin{quote}
+\verb!\part{!\texttt{\em Titel}\verb!}!%
+\footnote{\texttt{part} ist für die Gliederung eines
+größeren Werks in mehrere Teile vorgesehen und wird üblicherweise
+bei einer Diplomarbeit (und auch in diesem Dokument) nicht
+verwendet.}
+\newline%
+\verb!\chapter{!\texttt{\em Titel}\verb!}! \newline%
+\verb!\section{!\texttt{\em Titel}\verb!}! \newline%
+\verb!\subsection{!\texttt{\em Titel}\verb!}! \newline%
+\verb!\subsubsection{!\texttt{\em Titel}\verb!}! \newline%
+\verb!\paragraph{!\texttt{\em Titel}\verb!}! \newline%
+\verb!\subparagraph{!\texttt{\em Titel}\verb!}!
+\end{quote}
+%
+
+\paragraph{Häufiger Fehler:} Bei \verb!\paragraph{}! und
+\verb!\subparagraph{}! läuft -- wie in diesem Absatz zu sehen --
+der dem Titel folgende Text ohne Umbruch in der selben Zeile
+weiter, weshalb man im Titel auf eine passende Punktuation (hier
+\zB\ \underline{\texttt{:}}) achten sollte. Der horizontale Abstand
+nach dem Titel allein würde diesen als Überschrift nicht erkennbar
+machen.
+
+
+\subsection{Listen}
+
+Listen sind ein beliebtes Mittel zur Textstrukturierung. In
+\latex\ sind -- ähnlich wie in HTML -- drei Arten von formatierten
+Listen verfügbar: ungeordnete Auflistung ("`Knödelliste"'),
+geordnete Auflistung (Aufzählung) und Beschreibungsliste
+(Description):
+%
+\begin{verbatim}
+    \begin{itemize}     ... \end{itemize}
+    \begin{enumerate}   ... \end{enumerate}
+    \begin{description} ... \end{description}
+\end{verbatim}
+%
+Listeneinträge werden jeweils mit \verb!\item! markiert, bei {\tt
+description}-Listen mit \verb!\item[!\texttt{\em titel}\verb!]!. Listen
+können ineinander verschachtelt werden, wobei sich bei {\tt
+itemize}- und \texttt{enumerate}-Listen die Aufzählungszeichen mit
+der Schachtelungstiefe ändern (Details dazu in der
+\latex-Dokumentation).
+
+
+\subsection{Absatzformatierung und Zeilenabstand}
+
+Diplomarbeiten werden -- wie Bücher -- in der Regel einspaltig und
+im Blocksatz formatiert, was für den Fließtext wegen der großen
+Zeilenlänge vorteilhaft ist. Innerhalb von Tabellen kommt es
+wegen der geringen Spaltenbreite jedoch häufig zu Problemen mit
+Abteilungen und Blocksatz, weshalb man dort ohne schlechtes
+Gewissen zum Flattersatz ("`ragged right"') greifen sollte (wie
+\zB\ in Tab.~\ref{tab:synthesis-techniques} auf Seite
+\pageref{tab:synthesis-techniques}).
+
+\subsection{Fußnoten}
+Fußnoten können in \latex\ an beinahe jeder beliebigen Stelle,
+jedenfalls aber in normalen Absätzen, durch die Anweisung
+%
+\begin{quote}
+\verb!\footnote{!\texttt{\em Fußnotentext}\verb!}!
+\end{quote}
+%
+gesetzt werden. Zwischen der \verb!\footnote!-Marke und dem davor
+liegenden Text sollte grundsätzlich \emph{kein Leerzeichen} entstehen (eventuelle
+Zeilen\-um\-brüche mit \verb!%! auskommentieren).
+Die Nummerierung und Platzierung der Fußnoten
+erfolgt automatisch, sehr große Fußnoten werden notfalls sogar auf
+zwei aufeinanderfolgende Seiten umgebrochen.
+
+
+
+\subsection{Definierte Abkürzungen}
+
+
+\begin{table}
+\caption{In \texttt{WHZ.sty} definierte Abkürzungsmakros.}
+\label{tab:abkuerzungen}
+\centering
+\begin{tabular}{llp{2cm}ll}
+\hline
+    \verb+\bzw+        & \bzw   & &  \verb+\ua+         & \ua \\
+    \verb+\bzgl+       & \bzgl  & &  \verb+\Ua+         & \Ua \\
+    \verb+\ca+         & \ca    & &  \verb+\uae+        & \uae \\
+    \verb+\dah+        & \dah   & &  \verb+\usw+        & \usw \\
+    \verb+\Dah+        & \Dah   & &  \verb+\uva+        & \uva \\
+    \verb+\ds+         & \ds    & &  \verb+\uvm+        & \uvm \\
+    \verb+\evtl+       & \evtl  & &  \verb+\va+         & \va \\
+    \verb+\ia+         & \ia    & &  \verb+\vgl+        & \vgl \\
+    \verb+\sa+         & \sa    & &  \verb+\zB+         & \zB \\
+    \verb+\so+         & \so    & &  \verb+\ZB+         & \ZB \\
+    \verb+\su+         & \su    & &                     &     \\
+\hline
+\end{tabular}
+\end{table}
+
+

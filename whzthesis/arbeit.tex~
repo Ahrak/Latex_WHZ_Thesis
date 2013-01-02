@@ -1,0 +1,48 @@
+% Zulässige Class Options: 
+%   Hauptsprache: german (default), english
+%   Art der Arbeit: diplom, bachelor, master (wenn leer -> "Wis. Arbeit")
+%   Betreuender Prof.: golubski, beier, haeber, remke, lenk, krauss, schwarz
+%   ...
+\documentclass[
+		%,bachelor	% type
+		,schwarz	% prof
+		%,printfriendly % Druckfreundliche Version (keine farbigen Links)
+%show pages:
+		,selbsterkl		% Selbständigkeitserklärung anzeigen
+        %,kurzfassung	% Kurzfassung
+        %,glossar		% Glossar
+        %,abbverz		% Abbildungsverzeichnis
+        %,tabverz		% Tabellenverzeichnis
+        %,lstverz		% Listingverzeichnis (Codelistings)
+]{whzthesis}
+
+\graphicspath{{images/}}    % wo liegen die Bilder?
+
+%% Felder für ALLE Arbeiten: --------------------------------
+\titlename{Vorlage für das Verfassen wissenschaftlicher Arbeiten mit dem Textsatzsystem \latex}
+\authorname{Tommy Hartmann}
+\gebdatum{17. Februar 1987}
+\gebort{Grimma}
+\abgabedatum{01. April 2011}
+%%% zusätzlich für eine Bachelorarbeit: ---------------------
+\semester{Sommersemester 2011} 
+%\betreuerProf{Prof. Werner Remke}
+\betreuerUnternehmen{Prof. Dr. Werner Remke, WH Zwickau}
+
+\nocite{*}
+\begin{document}
+%%%----------------------------------------------------------
+
+
+%\include{chapter/Richtlinien}
+%\include{chapter/DokClass}
+%\include{chapter/latex}
+%\include{chapter/pakete}
+
+%\chapter*{Thesen}
+%\addcontentsline{toc}{chapter}{Thesen}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+%\these{\latex\ ist keine Programmiersprache {\Large\smiley}}
+%%%----------------------------------------------------------
+\end{document}

@@ -1,0 +1,8 @@
+\vfill
+\chapter*{Autorenreferat}
+\addcontentsline{toc}{chapter}{Autorenreferat}
+
+\mynote{Folgender Text ist nur Platzhalter! Hier muss noch eine richtige Kurzfassung hin!}
+
+Die Arbeit beschäftigt sich mit der Erstellung eines CRUD-Frameworks innerhalb einer Java Enterprise Umgebung.
+Ziel der Arbeit ist es eine dynamische Benutzeroberfläche zu schaffen 

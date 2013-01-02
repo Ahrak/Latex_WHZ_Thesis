@@ -1,0 +1,125 @@
+\chapter{Die Dokumentenklasse}
+
+
+\section{Die Klasse}
+\label{sec:class_class}
+%=============================================
+
+Die Dokumentenklasse \textit{whzthesis.cls} ist eine \latex-Vorlage für das Erstellen von wissenschaftlichen Arbeiten im Fachbereich Informatik an der \abk{WHZ}.
+Die Klasse wurde nach den Richtlinien für das Erstellen von Bachelor-arbeiten im Studiengang Informatik erstellt (\siehe{chap:richtlinien}). 
+Die Grundlage für die Dokumentenklasse bildete die Vorlage "`LaTeX-Vorlage für Hochschularbeiten"' von Wilhelm Burger (FH-Hagenberg)\cite{BURG11}. 
+
+
+\section{Verwenden der Dokumentenklasse}
+\label{sec:class_use}
+%=============================================
+
+\subsection{Angabe der Klasse}
+%------------------------
+Um die Vorlage \bzw die Dokumentenklasse zu benutzen müssen die beiden Dateien \textit{whzthesis.cls} und \textit{whz.sty} im gleichem Ordner wie
+das Hauptdokumenten liegen. Die Verwendung erfolgt über den \latex-Befehl \textit{$\setminus$documentclass[<options>]\{whzthesis\}}.
+
+\subsection{Minimalbeispiel}
+%---------------------------
+\lstset{language=[LaTeX]TeX}
+\begin{lstlisting}[caption=Beispiel für die Konfiguration der Dokumentenklasse]
+\documentclass[
+	,bachelor		% type
+	,schwarz		% prof
+	,selbsterkl		% Selbstaendigkeitserklaerung anzeigen
+	,glossar		% Glossar	
+	,abbverz		% Abbildungsverzeichnis
+]{whzthesis}
+\titlename{Meine Wissenschafliche Arbeit}
+\authorname{Hans Wurst}
+\gebdatum{23. Januar 1983}
+\gebort{Musterstadt}
+\abgabedatum{27. Mai 2011}
+\semester{Sommersemester 2011} 
+\betreuerUnternehmen{Dipl. Inf. Max Mustermann, Muster AG, Musterhausen}
+\begin{document} ...\end{document}
+
+
+\end{lstlisting}
+
+
+\section{Optionen}
+\label{sec:class_opts}
+%=============================================
+
+\subsection{Art der Arbeit}
+%--------------------------
+Um die Art derArbeit festzulegen gibt es folgende Optionsmöglichkeiten:\\
+
+\begin{tabular}{lll}
+\bf Option&\bf Art&\bf Titel der Arbeit \\
+\hline\hline
+  bachelor			& Bachelorthesis & Bachelorarbeit   \\
+  master			& Masterthesis   & Masterthesis     \\
+  diplom			& Diplomarbeit	 & Diplomarbeit 	\\
+\end{tabular}\\[5mm]
+
+Wird keine der oben aufgeführten Optionen angegeben wird Standardmäßig als Titel "`Wissenschaftliche Arbeit"' gewählt.
+
+
+\subsection{Betreuer}
+%--------------------
+Für die/den jeweiligen BetreuerIn der \abk{WHZ} gibt es eine eigene Option. Die jeweilige Option ist dabei der kleingeschriebene Familienname
+(\textit{golubski, beier, haeber, remke, lenk, krauss, schwarz}). 
+Ist für die/den BetreuerIn der Arbeit innerhalb der  \abk{WHZ} keine Option vorhanden kann der Name über den Befehl \textit{$\setminus$betreuerProf\{name\}} nachträglich hinzugefügt werden. 
+Für die/den BetreuerIn innerhalb des Unternehmens existiert der optionale Befehl \textit{$\setminus$betreuerUnternehmen\{name\}}.
+
+\subsection{Druckfreundliche Version}
+%------------------------------------
+Für die Druckversion der Arbeit gibt es die Option \textit{printfriendly}. 
+Diese entfernt die farbliche Hinterlegung der externen und internen Referenzen.
+
+\subsection{Verzeichnisse}
+%------------------------------------
+Das Anzeigen der jeweiligen Verzeichnisse wird ebenfalls über Optionen der Dokumentenklasse gesteuert. 
+Die Nachfolgende Auflistung zeigt die möglichen Optionen der anzeigbaren Verzeichnisse.\\
+
+\begin{itemize}
+
+  \item \textit{glossar}: Glossar und Abkürzungsverzeichnis
+  \item \textit{abbverz}: Abbildungsverzeichnis
+  \item \textit{tabverz}: Tabellenverzeichnis
+  \item \textit{lstverz}: Listingverzeichnis (Codelistings)
+
+\end{itemize}
+
+
+		%,selbsterkl		% Selbständigkeitserklärung anzeigen
+        %,kurzfassung	% Kurzfassung
+
+
+\subsubsection{Variable}
+
+Die Dokumentenklasse ist für verschiedene Arten von Arbeiten vorgesehen, die sich nur im Aufbau 
+der Titelseiten unterscheiden. 
+Abhängig vom gewählten Dokumententyp sind unterschiedliche Elemente für die Titelseiten erforderlich (siehe Tabelle \ref{tab:TitelElemente}).
+Folgende Basisangaben sind für \textbf{alle} Arten von Arbeiten
+erforderlich:
+%
+\begin{itemize}
+\item[] %
+\verb!\title{!\texttt{\em Titel der Arbeit}\verb!}! \newline%
+\verb!\author{!\texttt{\em Autor}\verb!}! \newline%
+\verb!\studiengang{!\texttt{\em Studiengang}\verb!}! \newline%
+\verb!\studienort{!\texttt{\em Studienort}\verb!}! \newline%
+\verb!\abgabemonat{!\texttt{\em Monat der Abgabe}\verb!}! \newline%
+\verb!\abgabejahr{!\texttt{\em Jahr der Abgabe}\verb!}!
+\end{itemize}
+%
+
+
+\subsection{Verzeichnisstruktur}
+
+\begin{filelist}{/whzthesis}
+ 
+  \fitem{arbeit.tex}
+  \fitem{arbeit.tex}
+  \fitem{arbeit.tex}
+
+\end{filelist}
+

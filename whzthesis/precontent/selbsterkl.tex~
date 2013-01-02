@@ -1,0 +1,25 @@
+\vspace*{\fill}
+\begin{minipage}[b]{\textwidth}
+ 
+
+\textbf{Selbständigkeitserklärung gem. § 22 Absatz 5 BPO}
+\\
+
+Hiermit versichere ich, \theauthor, 
+dass ich die vorliegende \insertdoctitel mit dem Titel \qde{\thetitle}
+selbständig und ohne fremde Hilfe verfasst und keine anderen als die angegebenen Hilfsmittel benutzt habe. 
+Die Stellen der Arbeit, die dem Wortlaut oder dem Sinne nach anderen Werken entnommen wurden, sind in jedem Fall unter Angabe der Quelle kenntlich gemacht. 
+Die Arbeit ist noch nicht veröffentlicht oder in anderer Form als Prüfungsleistung vorgelegt worden.
+
+\vspace{4cm}
+
+\begin{center}
+\begin{tabular}{ p{0.35\textwidth} p{0.2\textwidth} p{0.35\textwidth} }
+\ 			& \  		& 	\  			\\ 
+\cline{1-1} \cline{3-3}
+Ort, Datum 		& \ 	 	&	Unterschrift 		\\
+\end{tabular}
+\end{center}
+
+\end{minipage}
+\vspace*{\fill}
