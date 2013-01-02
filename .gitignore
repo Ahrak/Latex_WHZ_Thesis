@@ -34,3 +34,4 @@
 *~
 *.tdo
 *.properties.xml
+.*.properties.xml
