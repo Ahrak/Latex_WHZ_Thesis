@@ -29,4 +29,6 @@
 *.toc
 *.vrb
 *.xdy
+*.tex~
+*.backup
 *.tdo
